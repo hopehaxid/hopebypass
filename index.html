@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最全的店铺</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0000; /* Warna dasar gelap kemerahan */
+        }
+
+        /* Custom Scrollbar biar elegan */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(239, 68, 68, 0.5); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(239, 68, 68, 0.8); }
+
+        .glass-panel {
+    background: rgba(255, 255, 255, 0.05); /* lebih transparan */
+    backdrop-filter: blur(10px); /* sebelumnya mungkin 20-30 */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col relative overflow-x-hidden">
+    
+    <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full object-cover z-[-2]">
+        <source src="assets/video/dragonmen.mp4" type="video/mp4">
+    </video>
+
+    <div class="fixed inset-0 bg-gradient-to-b from-black/80 via-red-950/40 to-black/90 z-[-1] pointer-events-none"></div>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://link.hhtjim.com/163/2728942614.mp3" type="audio/mpeg">
+    </audio>
+
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[80px] flex items-center justify-between">
+            
+            <a href="#" onclick="switchTab('home'); return false;" class="flex items-center gap-3 hover:opacity-80 transition-all">
+                <img src="https://i.imgur.com/iix3Gxp.png" alt="Logo" class="h-12 w-auto drop-shadow-[0_0_10px_rgba(239,68,68,0.6)]">
+                <span class="text-2xl tracking-tighter text-white uppercase italic font-bold">HOPE<span class="text-red-600">HAX</span></span>
+            </a>
+
+            <nav class="flex gap-6 font-semibold">
+                <button onclick="switchTab('home')" id="tab-home" class="text-red-400 transition hover:text-red-300">首页</button>
+                <button onclick="switchTab('review')" id="tab-review" class="text-gray-400 transition hover:text-white">照片评价</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        
+        <div id="page-home" class="space-y-16 animate-[fadeInUp_0.5s_ease-out]">
+            
+            <div class="glass-panel rounded-3xl p-8 max-w-4xl mx-auto shadow-2xl text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">HOPE BYPASS中国希望🇨🇳官方频道</h1>
+                <p class="text-gray-300 mb-8 text-sm md:text-base">专业外包搭建. 高端定制服务.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+                    <a href="https://918.oioix.cn/links/CA32F91D?go=1" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-400/50 rounded-xl py-4 transition-all hover:-translate-y-1 shadow-lg">
+                        <i class="fas fa-shopping-cart text-red-400"></i> <span>下单</span>
+                    </a>
+                    <a href="https://pan.quark.cn/s/c662c267eeb9" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-400/50 rounded-xl py-4 transition-all hover:-translate-y-1 shadow-lg">
+                        <i class="fas fa-cloud-download-alt text-red-400"></i> <span>下载</span>
+                    </a>
+                    <a href="https://t.me/HOPENBNB" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-400/50 rounded-xl py-4 transition-all hover:-translate-y-1 shadow-lg">
+                        <i class="fab fa-telegram-plane text-red-400"></i> <span>TG售后客服 </span>
+                    </a>
+                    <a href="https://t.me/HOPEVIPbypass" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-400/50 rounded-xl py-4 transition-all hover:-translate-y-1 shadow-lg">
+                        <i class="fab fa-telegram-plane text-red-400"></i> <span>HOPE官方主频道 </span>
+                    </a>
+                    <a href="https://t.me/bypasspubghope" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-400/50 rounded-xl py-4 transition-all hover:-translate-y-1 shadow-lg">
+                        <i class="fab fa-telegram-plane text-red-400"></i> <span>HOPE官方副频道</span>
+                    </a>
+                    <a href="https://t.me/hopetaling" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-400/50 rounded-xl py-4 transition-all hover:-translate-y-1 shadow-lg">
+                        <i class="fab fa-telegram-plane text-red-400"></i> <span>HOPE官方不禁言交流群</span>
+                    </a>
+                    <a href="https://t.me/HOPEpubgfk" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-400/50 rounded-xl py-4 transition-all hover:-translate-y-1 shadow-lg">
+                        <i class="fab fa-telegram-plane text-red-400"></i> <span>国际服反馈图查看频道</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-2xl border border-red-500/20 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
+                    <div class="text-3xl md:text-5xl font-extrabold text-center md:text-left leading-tight">
+                        <div class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">由玩家支持.</div>
+                        <div class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-600">为胜利而打造.</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex gap-4 rounded-xl px-6 py-4 items-center bg-gradient-to-r from-white/5 to-red-500/10 border border-red-500/20">
+                            <div class="text-red-400 text-3xl">★</div>
+                            <div>
+                                <div class="text-xl font-bold">4.9/5</div>
+                                <div class="text-xs text-gray-400">1000+ 条评价</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 rounded-xl px-6 py-4 items-center bg-gradient-to-r from-white/5 to-red-500/10 border border-red-500/20">
+                            <div class="text-red-400 text-3xl">✓</div>
+                            <div>
+                                <div class="text-xl font-bold">满意</div>
+                                <div class="text-xs text-gray-400">保证</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center w-full max-w-4xl mx-auto mb-2 text-sm md:text-lg font-semibold text-gray-400 px-4">
+                    <span>正常对局</span>
+                    <span class="text-red-400">加载模式</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center">
+                    <div class="shadow-[0_0_40px_rgba(239,68,68,0.15)] w-full max-w-4xl rounded-[15px] border-2 border-red-500/30 mb-8">
+                        <div id="compare-container" class="relative w-full h-[250px] md:h-[500px] overflow-hidden rounded-[13px] select-none cursor-ew-resize bg-black">
+                            <img id="compare-before" src="https://i.imgur.com/jASxJYT.jpeg" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Normal">
+                            <img id="compare-after" src="https://i.imgur.com/E4bmnX5.jpeg" class="absolute inset-0 w-full h-full object-cover pointer-events-none" style="clip-path: inset(0 0 0 50%);" alt="Injected">
+                            
+                            <div id="compare-handle" class="absolute top-0 bottom-0 left-[50%] w-1 bg-red-500 flex items-center justify-center shadow-[0_0_15px_#ef4444]" style="transform: translateX(-50%);">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gray-900/90 backdrop-blur-md border-2 border-red-500 rounded-full flex items-center justify-center shadow-xl pointer-events-none">
+                                    <span class="text-white text-xs md:text-sm font-bold">◄ ►</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-xl md:text-2xl font-bold mb-6">选择游戏，感受差异.</div>
+                    
+                    <div class="flex items-center justify-center bg-black/40 rounded-full p-2 gap-2 shadow-lg border border-red-500/30 backdrop-blur-md flex-wrap">
+    
+    <button id="btn-pubg" onclick="switchSliderGame('pubg')" class="game-btn inactive-btn px-6 py-2 rounded-full font-bold transition-all text-gray-400 hover:text-white border-2 border-transparent">
+        PubgMobile
+    </button>
+    
+    <button id="btn-gfp" onclick="switchSliderGame('gfp')" class="game-btn active-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-red-500 text-white bg-red-500/20">
+        Game for Peace
+    </button>
+    
+    <button id="btn-delta" onclick="switchSliderGame('delta')" class="game-btn inactive-btn px-6 py-2 rounded-full font-bold transition-all text-gray-400 hover:text-white border-2 border-transparent">
+        DeltaForce
+    </button>
+
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-review" class="hidden animate-[fadeInUp_0.5s_ease-out]">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500 mb-4">客户评价</h2>
+                <p class="text-gray-20000">了解社区用户对我们软件的反馈.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="glass-panel rounded-2xl overflow-hidden group">
+                    <img src="https://i.imgur.com/OPu8bKl.jpeg" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" alt="Review">
+                    <div class="p-4">
+                        <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
+                        <p class="text-gray-300 text-sm">"目前为止最安全的软件，真的很棒"</p>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-2xl overflow-hidden group">
+                    <img src="https://i.imgur.com/2VeH8Ia.jpeg" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" alt="Review">
+                    <div class="p-4">
+                        <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
+                        <p class="text-gray-300 text-sm">"在 Delta Force 上使用非常流畅，没有任何卡顿"</p>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-2xl overflow-hidden group">
+                    <img src="https://i.imgur.com/P9MjC46.jpeg" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" alt="Review">
+                    <div class="p-4">
+                        <div class="text-yellow-400 text-sm mb-2">★★★★★</div>
+                        <p class="text-gray-300 text-sm">"回复迅速，卖家值得推荐！"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="bg-gray-900/60 border border-gray-700/50 backdrop-blur-md rounded-2xl p-5 w-full max-w-lg shadow-2xl mx-auto mt-20">
+            <div class="flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3 flex-1 min-w-0">
+                    <div class="bg-[#5865F2]/10 p-2 rounded-lg shrink-0">
+                        <img alt="Discord Icon" loading="lazy" width="24" height="24" class="w-6 h-6 object-contain" src="https://png.pngtree.com/png-clipart/20250210/original/pngtree-red-shopping-cart-icon-symbolizing-retail-and-online-purchases-in-a-png-image_20404631.png">
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="text-white font-extrabold text-sm md:text-base tracking-tight">欢迎再次光临本店</span>
+                            <span class="inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-black uppercase bg-red-500 text-white animate-pulse">全新</span>
+                        </div>
+                        <p class="text-gray-400 text-xs font-medium">24/7 在线客服 • 实时更新 • 可靠支持</p>
+                    </div>
+                </div>
+                <a target="_blank" rel="noopener noreferrer" href="https://918.oioix.cn/links/CA32F91D?go=1"
+   class="whitespace-nowrap transition-all duration-300 transform hover:-translate-y-1 active:scale-95 
+   bg-red-600 hover:bg-red-700 
+   shadow-[0_0_15px_rgba(239,68,68,0.4)] hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] 
+   h-10 text-white font-bold rounded-xl px-6 text-sm md:text-base flex items-center justify-center gap-2">
+    
+    <i class="fas fa-shopping-bag"></i> 立即购买
+</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-auto glass-panel border-t border-white/10 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-2">HOPEVIP</h3>
+            <p class="text-gray-400 text-sm mb-4">我们竭尽全力，用心为您服务.<br>欢迎向我们咨询任何问题</p>
+            <div class="flex justify-center gap-4 text-xl">
+                <a href="#" class="text-gray-400 hover:text-red-400 transition"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p class="text-xs text-gray-500 mt-6">&copy; 2026 Hope 版权所有.</p>
+        </div>
+    </footer>
+
+    <div id="musicPrompt" class="fixed top-24 right-[-400px] glass-panel px-6 py-4 rounded-xl shadow-2xl flex items-center gap-4 transition-all duration-500 z-50 border border-white/10">
+        <div class="font-semibold text-sm">
+            播放背景音乐? <span id="countdown" class="text-red-400 ml-1">5s</span>
+        </div>
+        <div class="flex gap-2">
+            <button onclick="handleMusic(true)" class="w-8 h-8 rounded-full bg-green-500/20 text-green-400 border border-green-500 hover:bg-green-500 hover:text-white transition flex items-center justify-center"><i class="fas fa-check"></i></button>
+            <button onclick="handleMusic(false)" class="w-8 h-8 rounded-full bg-red-500/20 text-red-400 border border-red-500 hover:bg-red-500 hover:text-white transition flex items-center justify-center"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // 1. LOGIKA NAVIGASI TAB (HOME & REVIEW)
+        function switchTab(tabId) {
+            const homePage = document.getElementById('page-home');
+            const reviewPage = document.getElementById('page-review');
+            const tabHome = document.getElementById('tab-home');
+            const tabReview = document.getElementById('tab-review');
+
+            if(tabId === 'home') {
+                homePage.classList.remove('hidden');
+                reviewPage.classList.add('hidden');
+                tabHome.classList.replace('text-gray-400', 'text-red-400');
+                tabReview.classList.replace('text-white', 'text-gray-400');
+            } else {
+                homePage.classList.add('hidden');
+                reviewPage.classList.remove('hidden');
+                tabReview.classList.replace('text-gray-400', 'text-red-400');
+                tabHome.classList.replace('text-red-400', 'text-gray-400');
+            }
+        }
+
+        // 2. LOGIKA SLIDER BEFORE/AFTER
+        const gameImages = {
+            pubg: {
+                before: 'https://i.imgur.com/HD5VH4T.jpeg', 
+                after: 'https://i.imgur.com/1iqiuZl.jpeg'      
+            },
+            gfp: {
+                // GANTI LINK INI SAMA GAMBAR GAME FOR PEACE LU
+                before: 'https://i.imgur.com/jASxJYT.jpeg', 
+                after: 'https://i.imgur.com/E4bmnX5.jpeg'      
+            },
+            delta: {
+                before: 'https://i.imgur.com/UItx8C0.jpeg', 
+                after: 'https://i.imgur.com/V1AaIt7.png'      
+            }
+        };
+
+        function switchSliderGame(gameId) {
+            document.querySelectorAll('.game-btn').forEach(btn => {
+                btn.classList.remove('active-btn', 'text-white', 'bg-red-500/20', 'border-red-500');
+                btn.classList.add('inactive-btn', 'text-gray-400', 'border-transparent');
+            });
+
+            const activeBtn = document.getElementById('btn-' + gameId);
+            activeBtn.classList.remove('inactive-btn', 'text-gray-400', 'border-transparent');
+            activeBtn.classList.add('active-btn', 'text-white', 'bg-red-500/20', 'border-red-500');
+
+            document.getElementById('compare-before').src = gameImages[gameId].before;
+            document.getElementById('compare-after').src = gameImages[gameId].after;
+        }
+
+        const container = document.getElementById('compare-container');
+        const afterImg = document.getElementById('compare-after');
+        const handle = document.getElementById('compare-handle');
+        let isDragging = false;
+
+        function updateSlider(e) {
+            if (!isDragging) return;
+            let rect = container.getBoundingClientRect();
+            let x = e.clientX || (e.touches && e.touches[0].clientX);
+            x = x - rect.left;
+            let percentage = Math.max(0, Math.min(x / rect.width, 1)) * 100;
+            handle.style.left = percentage + '%';
+            afterImg.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        }
+
+        container.addEventListener('mousedown', () => isDragging = true);
+        container.addEventListener('touchstart', () => isDragging = true, {passive: true});
+        window.addEventListener('mouseup', () => isDragging = false);
+        window.addEventListener('touchend', () => isDragging = false);
+        window.addEventListener('mousemove', updateSlider);
+        window.addEventListener('touchmove', updateSlider, {passive: true});
+
+        // 3. LOGIKA AUDIO & PROMPT
+        const audio = document.getElementById('bgMusic');
+        let countdownTimer;
+        let remainingTime = 5;
+
+        function showMusicPrompt() {
+            const prompt = document.getElementById('musicPrompt');
+            prompt.style.right = '24px'; // Muncul dari kanan
+            startCountdown();
+        }
+
+        function startCountdown() {
+            countdownTimer = setInterval(() => {
+                remainingTime--;
+                document.getElementById('countdown').textContent = `${remainingTime}s`;
+                if (remainingTime <= 0) {
+                    handleMusic(true); // Auto-play kalau dibiarin
+                }
+            }, 1000);
+        }
+
+        function handleMusic(accept) {
+            clearInterval(countdownTimer);
+            document.getElementById('musicPrompt').style.right = '-400px'; // Sembunyikan
+            if(accept) {
+                audio.volume = 0.5;
+                audio.play().catch(e => console.log('Autoplay dicegah browser'));
+            }
+        }
+
+        // Tampilkan prompt musik 1.5 detik setelah web dibuka
+        window.onload = () => setTimeout(showMusicPrompt, 1500);
+        
+        // Pause musik kalau tab browser diminimize
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) audio.pause();
+            else if (audio.currentTime > 0) audio.play();
+        });
+    </script>
+</body>
+</html>
